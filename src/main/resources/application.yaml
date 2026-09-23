@@ -1,0 +1,13 @@
+ktor:
+  deployment:
+    port: 8080
+  application:
+    modules:
+      - com.vipin.SerializationKt.configureSerialization
+      - com.vipin.ResourcesKt.configureResources
+      - com.vipin.RoutingKt.configureRouting
+
+    movieApi:
+      apiKey: ${OMDB_API_KEY}
+
+
